@@ -20,8 +20,8 @@ index fdd491362..1a37db38c 100644
        ruby_SHA="78e36e4671fd08790bfbfda4408d559341c9872bf48a4f6eab78157a3bf3efa6"
        ;;
 +    ppc64le)
-+      ruby_URL="https://raw.githubusercontent.com/runlevel5/portable-ruby-ppc64/master/portable-ruby-2.6.3.ppc64le_linux.bottle.tar.gz"
-+      ruby_URL2="https://raw.githubusercontent.com/runlevel5/portable-ruby-ppc64/master/portable-ruby-2.6.3.ppc64le_linux.bottle.tar.gz"
++      ruby_URL="https://raw.githubusercontent.com/runlevel5/linuxbrew-ppc64le/master/portable-ruby-2.6.3.ppc64le_linux.bottle.tar.gz"
++      ruby_URL2="https://raw.githubusercontent.com/runlevel5/linuxbrew-ppc64le/master/portable-ruby-2.6.3.ppc64le_linux.bottle.tar.gz"
 +      ruby_SHA="e083051b98d125a62c646c32a7d3795113a70ac462ea6db7339ac6579100a292"
 +      ;;
    esac

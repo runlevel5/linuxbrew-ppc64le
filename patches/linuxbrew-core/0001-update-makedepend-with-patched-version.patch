@@ -21,7 +21,7 @@ index 9cd97362b0..a5064abb88 100644
 -    url "https://xorg.freedesktop.org/releases/individual/proto/xproto-7.0.31.tar.gz"
 -    mirror "http://xorg.mirrors.pair.com/individual/proto/xproto-7.0.31.tar.gz"
 -    sha256 "6d755eaae27b45c5cc75529a12855fed5de5969b367ed05003944cf901ed43c7"
-+    url "https://raw.githubusercontent.com/runlevel5/portable-ruby-ppc64/master/xproto-7.0.31-with-latest-config-guess.tar.gz"
++    url "https://raw.githubusercontent.com/runlevel5/linuxbrew-ppc64le/master/xproto-7.0.31-with-latest-config-guess.tar.gz"
 +    sha256 "078255d5e2c2204b378729d1d47ff3f92c6dd6e76abcf9c4058f2d036c4bf1cf"
    end
  
