@@ -1,0 +1,40 @@
+From 522f9d421534a272e425134a5fda8c2545537bad Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Trung=20L=C3=AA?= <trung.le@ruby-journal.com>
+Date: Wed, 5 Feb 2020 16:53:11 +1100
+Subject: [PATCH] support ppc64le
+
+---
+ Formula/portable-openssl.rb | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/Formula/portable-openssl.rb b/Formula/portable-openssl.rb
+index c09dcf3..fe63e1d 100644
+--- a/Formula/portable-openssl.rb
++++ b/Formula/portable-openssl.rb
+@@ -26,18 +26,21 @@ class PortableOpenssl < PortableFormula
+       ["darwin64-x86_64-cc", "enable-ec_nistp_64_gcc_128"]
+     else
+       args = ["enable-md2"]
+-      if Hardware::CPU.intel?
++      case
++      when Hardware::CPU.intel?
+         if Hardware::CPU.is_64_bit?
+           args << "linux-x86_64"
+         else
+           args << "linux-elf"
+         end
+-      elsif Hardware::CPU.arm?
++      when Hardware::CPU.arm?
+         if Hardware::CPU.is_64_bit?
+           args << "linux-aarch64"
+         else
+           args << "linux-armv4"
+         end
++      when Hardware::CPU.ppc? && Hardware::CPU.is_64_bit?
++        args << "linux-ppc64le"
+       end
+       args
+     end
+-- 
+2.25.0
+
