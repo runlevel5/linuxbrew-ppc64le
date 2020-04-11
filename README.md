@@ -2,6 +2,17 @@
 
 Is it possible to port homebrew to Linux ppc64le? The answer is yes.
 
+## How to install linux-brew on ppc64le?
+
+* Install brew - see [doc](https://docs.brew.sh/Homebrew-on-Linux)
+* Apply patch with:
+
+```
+cd $HOMEBREW_REPOSITORY
+wget https://raw.githubusercontent.com/runlevel5/linuxbrew-ppc64le/master/patches/brew/0001-support-ppc64le.patch
+git am 0001-support-ppc64le.patch
+```
+
 ## How do I build the portable ruby that homebrew use?
 
 Firstly, I manually built my portable ruby version based on portable-ruby formula in https://github.com/Homebrew/homebrew-portable-ruby. Basically I create a bash script that replicate exact way that homebrew build that formula.
@@ -37,7 +48,7 @@ In order to get `brew` working under ppc, please applying following patches acco
 
 ```
 git clone https://github.com/Homebrew/brew.git
-cd brew && wget https://raw.githubusercontent.com/runlevel5/linuxbrew-ppc64le/master/patches/brew/0001-support-ppc64le.patch
+cd brew && 
 git am 0001-Support-ppc64le.patch
 
 git clone https://github.com/Homebrew/linuxbrew-core.git
