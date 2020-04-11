@@ -8,6 +8,7 @@ Is it possible to port homebrew to Linux ppc64le? The answer is yes.
 * Apply patch with:
 
 ```
+rm -rf %HOME.cache/Homebrew/
 cd $HOMEBREW_REPOSITORY
 wget https://raw.githubusercontent.com/runlevel5/linuxbrew-ppc64le/master/patches/brew/0001-support-ppc64le.patch
 git am 0001-support-ppc64le.patch
