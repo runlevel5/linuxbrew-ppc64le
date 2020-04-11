@@ -37,8 +37,8 @@ In order to get `brew` working under ppc, please applying following patches acco
 
 ```
 git clone https://github.com/Homebrew/brew.git
-wget https://raw.githubusercontent.com/runlevel5/linuxbrew-ppc64le/master/patches/brew/0001-Support-ppc64le.patch
-cd brew && git am 0001-Support-ppc64le.patch
+cd brew && wget https://raw.githubusercontent.com/runlevel5/linuxbrew-ppc64le/master/patches/brew/0001-support-ppc64le.patch
+git am 0001-Support-ppc64le.patch
 
 git clone https://github.com/Homebrew/linuxbrew-core.git
 wget https://raw.githubusercontent.com/runlevel5/linuxbrew-ppc64le/master/patches/linuxbrew-core/0001-support-ppc64le.patch
